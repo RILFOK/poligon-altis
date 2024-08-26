@@ -1,0 +1,67 @@
+﻿OnLoadName = "UTF server";
+onLoadMission = "4.4.0.Stable";
+author = "Коллективный разум(с)";
+
+respawn = "BASE";
+respawnDelay = 3;
+respawnOnStart = 0;
+
+disabledAI = 1; 
+enableDebugConsole = 1;
+loadScreen = "pics\utflogo.paa";
+joinUnassigned = true; // auto assign
+disableChannels[] = {{0, false, true},{2, true, true},{5,false,false}};
+
+class CfgUnitInsignia
+{
+    class UTFShevron
+    {
+        texture = "pics\utflogo.paa"; 
+        material = "\A3\Ui_f\data\GUI\Cfg\UnitInsignia\default_insignia.rvmat";
+    };
+};
+
+class Header {
+  gameType="COOP";
+  minPlayers=1;
+  maxPlayers=70;
+};
+
+#include "DIALOGS\PG_GUIS.hpp"
+#include "DIALOGS\Resources.hpp" 
+
+#include "taw_vd\GUI.h"
+#include "taw_vd\defines.h"
+#include "CLIENT\BT_func\adminka\define.hpp"
+#include "CLIENT\BT_func\adminka\adminka.hpp"
+#include "CLIENT\BT_func\adminka\main_menu.hpp"
+#include "CLIENT\BT_func\adminka\specmission.hpp"
+#include "CLIENT\BT_func\adminka\kickpanel.hpp"
+#include "CLIENT\outlw_magRepack\MagRepack_config.hpp"
+
+#include "BT_GUI\circleMenu\circleMenu.hpp"
+#include "BT_GUI\adminMenu\adminMenu.hpp"
+#include "BT_GUI\aviaMenu\aviaMenu.hpp"
+#include "BT_GUI\tankMenu\tankMenu.hpp"
+#include "BT_GUI\greenMenu\greenMenu.hpp"
+#include "BT_GUI\levelMenu\levelMenu.hpp"
+#include "BT_GUI\kickMenu\kickMenu.hpp"
+#include "BT_GUI\animMenu\animMenu.hpp"
+#include "BT_GUI\kmbMenu\kmbMenu.hpp"
+#include "BT_GUI\medalMenu\medalMenu.hpp"
+#include "BT_GUI\medalPlayer\medalPlayer.hpp"
+
+class RscTitles
+{
+  #include "DIALOGS\fps1.hpp"
+  #include "DIALOGS\fortification.hpp"
+  #include "CLIENT\BT_func\adminka\dialog_level_up.hpp"
+  #include "BT_GUI\progressBar\progressBar.hpp"
+};
+
+
+class CfgFunctions
+{
+  #include "Functions.hpp"
+  #include "taw_vd\CfgFunctions.hpp"
+};
