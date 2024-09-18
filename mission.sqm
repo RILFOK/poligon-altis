@@ -8,7 +8,7 @@ class EditorData
 	toggles=586;
 	class ItemIDProvider
 	{
-		nextID=19911;
+		nextID=19913;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=20985;
+		nextID=21137;
 	};
 	class Camera
 	{
-		pos[]={15963.417,50.367043,17020.148};
-		dir[]={-0.074039578,-0.71375996,-0.69646609};
-		up[]={-0.075452894,0.70039034,-0.70976067};
-		aside[]={-0.99439692,-3.7252903e-009,0.10571186};
+		pos[]={15907.218,84.256569,16934.863};
+		dir[]={0.69453585,-0.58508426,0.41870347};
+		up[]={0.5010761,0.8109718,0.30207595};
+		aside[]={0.51629674,8.6030923e-008,-0.85641998};
 	};
 };
 binarizationWanted=0;
@@ -133,20 +133,23 @@ addons[]=
 	"A3_Boat_F_Boat_Transport_01",
 	"A3_Boat_F_Destroyer_Destroyer_01",
 	"A3_Air_F_Jets_Plane_Fighter_01",
+	"anz_napalmmod",
 	"A3_Static_F_Jets_SAM_System_01",
 	"A3_Static_F_Jets_AAA_System_01",
 	"A3_Soft_F_Gamma_Truck_01",
+	"Blastcore_VEP",
 	"A3_Soft_F_Exp_Truck_01",
 	"A3_Props_F_Decade_Military_Decorative",
 	"A3_Weapons_F_Orange_Explosives",
 	"A3_Props_F_AoW_Items_Decorative",
-	"A3_Structures_F_Heli_Items_Airport"
+	"A3_Structures_F_Heli_Items_Airport",
+	"A3_Props_F_Orange_Furniture"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=63;
+		items=66;
 		class Item0
 		{
 			className="A3_Roads_F";
@@ -569,22 +572,40 @@ class AddonsMetaData
 		};
 		class Item60
 		{
+			className="anz_napalmmod";
+			name="ANZACSAS Napalm Mod";
+			author="ANZACSAS Steven";
+		};
+		class Item61
+		{
 			className="A3_Static_F_Jets";
 			name="Arma 3 Jets - Turrets";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item61
+		class Item62
+		{
+			className="Blastcore_VEP";
+			name="Blastcore_VEP";
+		};
+		class Item63
 		{
 			className="A3_Props_F_Decade";
 			name="CFGPATCHES_A3_Props_F_Decade";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item62
+		class Item64
 		{
 			className="A3_Weapons_F_Orange";
 			name="Arma 3 Orange - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item65
+		{
+			className="A3_Props_F_Orange";
+			name="Arma 3 Orange - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -685,7 +706,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=68;
+		items=70;
 		class Item0
 		{
 			dataType="Layer";
@@ -1734,7 +1755,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
-						init="private _compile = toString {}; " \n "this setObjectTextureGlobal [0, ""skins\ATF\kuma\kuma0.paa""]; " \n "this setObjectTextureGlobal [1, ""skins\ATF\kuma\kuma1.paa""]; " \n "this setObjectTextureGlobal [2, ""skins\ATF\kuma\kuma2.paa""];  " \n "this setObjectTextureGlobal [3, ""skins\ATF\camo.paa""]; " \n "[this, ""MBT-52 Kuma"", _compile, ""VEH_LIST_TANK"", [120, true, false]] remoteExec [""srv_fnc_addVeh""];";
+						init="private _compile = toString {}; " \n "[this, ""MBT-52 Kuma"", _compile, ""VEH_LIST_TANK"", [120, true, false]] remoteExec [""srv_fnc_addVeh""];";
 						name="veh_aps_0";
 						textures="Indep_02";
 						dynamicSimulation=1;
@@ -1937,7 +1958,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
-						init="private _compile = toString {}; " \n "this setObjectTextureGlobal [0, ""skins\ATF\varsuk\varsuk_0.paa""];   " \n "this setObjectTextureGlobal [1, ""skins\ATF\varsuk\varsuk_1.paa""];  " \n "this setObjectTextureGlobal [2, ""skins\ATF\varsuk\varsuk_2.paa""];   " \n "this setObjectTextureGlobal [3, ""skins\ATF\camo.paa""]; " \n "[this, ""T100X Futura"", _compile, ""VEH_LIST_TANK"", [120, true, false]] remoteExec [""srv_fnc_addVeh""];";
+						init="private _compile = toString {}; " \n "[this, ""T100X Futura"", _compile, ""VEH_LIST_TANK"", [120, true, false]] remoteExec [""srv_fnc_addVeh""];";
 						name="veh_aps_5";
 						textures="GreenHex";
 						dynamicSimulation=1;
@@ -2079,7 +2100,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
-						init="private _compile = toString {}; " \n "this setObjectTextureGlobal [0, ""skins\ATF\angara\angara_0.paa""];   " \n "this setObjectTextureGlobal [1, ""skins\ATF\angara\angara_1.paa""];   " \n "this setObjectTextureGlobal [2, ""skins\ATF\camo.paa""]; " \n "[this, ""T140K Angara"", _compile, ""VEH_LIST_TANK"", [120, true, false]] remoteExec [""srv_fnc_addVeh""];";
+						init="private _compile = toString {}; " \n "[this, ""T140K Angara"", _compile, ""VEH_LIST_TANK"", [120, true, false]] remoteExec [""srv_fnc_addVeh""];";
 						name="veh_aps_4";
 						textures="GreenHex";
 						dynamicSimulation=1;
@@ -4582,7 +4603,7 @@ class Mission
 			name="Система";
 			class Entities
 			{
-				items=52;
+				items=51;
 				class Item0
 				{
 					dataType="Logic";
@@ -7791,141 +7812,6 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={14174.638,18.474955,16367.669};
-						angles[]={0.0013372133,4.9878483,6.2818484};
-					};
-					areaSize[]={1,-1,1};
-					id=11728;
-					type="ModuleEditTerrainObject_F";
-					atlOffset=-1.9073486e-006;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="#name";
-							expression="_this setVariable [""#name"",_value]";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="#filter";
-							expression="_this setVariable [""#filter"",_value]";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="#initServer";
-							expression="_this setVariable [""#initServer"",_value]";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="#state";
-							expression="_this setVariable [""#state"",_value]";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=5;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="#allowDamage";
-							expression="_this setVariable [""#allowDamage"",_value]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="#doorStates";
-							expression="_this setVariable [""#doorStates"",_value]";
-							class Value
-							{
-								class data
-								{
-									singleType="ARRAY";
-									class value
-									{
-										items=3;
-										class Item0
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=0;
-											};
-										};
-										class Item1
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=0;
-											};
-										};
-										class Item2
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=0;
-											};
-										};
-									};
-								};
-							};
-						};
-						class Attribute6
-						{
-							property="#init";
-							expression="_this setVariable [""#init"",_value]";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="";
-								};
-							};
-						};
-						nAttributes=7;
-					};
-				};
-				class Item33
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
 						position[]={14138.267,19.728865,16250.62};
 						angles[]={0.0013372133,4.9878483,6.2818484};
 					};
@@ -8055,7 +7941,7 @@ class Mission
 						nAttributes=7;
 					};
 				};
-				class Item34
+				class Item33
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -8189,7 +8075,7 @@ class Mission
 						nAttributes=7;
 					};
 				};
-				class Item35
+				class Item34
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -8323,7 +8209,7 @@ class Mission
 						nAttributes=7;
 					};
 				};
-				class Item36
+				class Item35
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -8457,7 +8343,7 @@ class Mission
 						nAttributes=7;
 					};
 				};
-				class Item37
+				class Item36
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -8591,7 +8477,7 @@ class Mission
 						nAttributes=7;
 					};
 				};
-				class Item38
+				class Item37
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -8725,7 +8611,7 @@ class Mission
 						nAttributes=7;
 					};
 				};
-				class Item39
+				class Item38
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -8859,7 +8745,7 @@ class Mission
 						nAttributes=7;
 					};
 				};
-				class Item40
+				class Item39
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -8993,7 +8879,7 @@ class Mission
 						nAttributes=7;
 					};
 				};
-				class Item41
+				class Item40
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -9128,7 +9014,7 @@ class Mission
 						nAttributes=7;
 					};
 				};
-				class Item42
+				class Item41
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -9262,7 +9148,7 @@ class Mission
 						nAttributes=7;
 					};
 				};
-				class Item43
+				class Item42
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -9396,7 +9282,7 @@ class Mission
 						nAttributes=7;
 					};
 				};
-				class Item44
+				class Item43
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -9530,7 +9416,7 @@ class Mission
 						nAttributes=7;
 					};
 				};
-				class Item45
+				class Item44
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -9664,7 +9550,7 @@ class Mission
 						nAttributes=7;
 					};
 				};
-				class Item46
+				class Item45
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -9799,7 +9685,7 @@ class Mission
 						nAttributes=7;
 					};
 				};
-				class Item47
+				class Item46
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -9933,7 +9819,7 @@ class Mission
 						nAttributes=7;
 					};
 				};
-				class Item48
+				class Item47
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -10067,7 +9953,7 @@ class Mission
 						nAttributes=7;
 					};
 				};
-				class Item49
+				class Item48
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -10201,7 +10087,7 @@ class Mission
 						nAttributes=7;
 					};
 				};
-				class Item50
+				class Item49
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -10335,7 +10221,7 @@ class Mission
 						nAttributes=7;
 					};
 				};
-				class Item51
+				class Item50
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -11538,62 +11424,62 @@ class Mission
 				class Item87
 				{
 					dataType="Marker";
-					position[]={15971.03,13.741211,17017.697};
+					position[]={15971.03,13.741,17017.697};
 					name="d_runwaymarker_25";
 					markerType="RECTANGLE";
 					type="Empty";
-					colorName="ColorGreen";
+					colorName="ColorBlue";
 					fillName="Grid";
-					a=19.419832;
+					a=19.42;
 					b=3;
-					angle=88.020264;
+					angle=88.019997;
 					id=18711;
-					atlOffset=-0.014990807;
+					atlOffset=-0.015201569;
 				};
 				class Item88
 				{
 					dataType="Marker";
-					position[]={15971.834,13.533081,17041.512};
+					position[]={15971.311,13.533203,17040.357};
 					name="d_runwaymarker_26";
 					markerType="RECTANGLE";
 					type="Empty";
-					colorName="ColorGreen";
+					colorName="ColorBlue";
 					fillName="Grid";
-					a=4.3962994;
+					a=4.3959999;
 					b=3;
-					angle=104.18794;
+					angle=104.188;
 					id=18712;
-					atlOffset=-0.0025100708;
+					atlOffset=0.0020799637;
 				};
 				class Item89
 				{
 					dataType="Marker";
-					position[]={15977.351,13.523621,17056.557};
+					position[]={15976.614,13.523926,17054.563};
 					name="d_runwaymarker_27";
 					markerType="RECTANGLE";
 					type="Empty";
-					colorName="ColorGreen";
+					colorName="ColorBlue";
 					fillName="Grid";
-					a=11.235956;
+					a=11.236;
 					b=3;
-					angle=111.91548;
+					angle=111.91499;
 					id=18713;
-					atlOffset=-0.17054462;
+					atlOffset=-0.11993694;
 				};
 				class Item90
 				{
 					dataType="Marker";
-					position[]={15988.617,13.674683,17058.191};
+					position[]={15988.617,13.675,17058.189};
 					name="d_runwaymarker_29";
 					markerType="RECTANGLE";
 					type="Empty";
-					colorName="ColorGreen";
+					colorName="ColorBlue";
 					fillName="Grid";
-					a=6.862556;
+					a=6.8629999;
 					b=3;
-					angle=203.8786;
+					angle=203.879;
 					id=18715;
-					atlOffset=-0.042695045;
+					atlOffset=-0.042347908;
 				};
 				class Item91
 				{
@@ -16857,7 +16743,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={15962.392,15.884125,16985.299};
+						position[]={15962.392,16.013157,16985.299};
 						angles[]={0.018151423,6.2386794,0.0015009831};
 					};
 					side="Empty";
@@ -16872,7 +16758,7 @@ class Mission
 					};
 					id=12031;
 					type="I_MRAP_03_F";
-					atlOffset=-0.004155159;
+					atlOffset=0.12487698;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -16896,8 +16782,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={15968.897,15.849673,16985.639};
-						angles[]={0.0021255685,6.2203994,0.010529118};
+						position[]={15968.897,16.048794,16985.639};
+						angles[]={0.0021293017,6.2204061,0.010524335};
 					};
 					side="Empty";
 					flags=4;
@@ -16911,7 +16797,7 @@ class Mission
 					};
 					id=16943;
 					type="I_MRAP_03_F";
-					atlOffset=0.011478424;
+					atlOffset=0.21059895;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17341,13 +17227,13 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={15956.711,19.091064,17136.805};
-						angles[]={0.0080009829,3.2083752,0.0039967569};
+						position[]={15956.711,19.09095,17136.805};
+						angles[]={0.0079936078,3.208369,0.0039968039};
 					};
 					side="Empty";
 					class Attributes
 					{
-						init="[this,0,true] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "this setObjectTextureGlobal [0, ""skins\ATF\nyx\nyx_0.paa""]; " \n "this setObjectTextureGlobal [1, ""skins\ATF\nyx\nyx_1.paa""]; " \n "this setObjectTextureGlobal [2, ""skins\ATF\camo.paa""]; " \n "this setObjectTextureGlobal [3, ""skins\ATF\armor.paa""]; ";
+						init="[this,0,true] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "";
 						name="veh_aps_2";
 						textures="Indep_Olive";
 						dynamicSimulation=1;
@@ -17357,7 +17243,7 @@ class Mission
 					};
 					id=10673;
 					type="I_LT_01_cannon_F";
-					atlOffset=1.9811125;
+					atlOffset=1.980998;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17499,7 +17385,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={15940.723,22.516678,17147.752};
+						position[]={15940.723,22.516762,17147.752};
 						angles[]={0.01733112,0,6.2751913};
 					};
 					side="Empty";
@@ -17512,7 +17398,7 @@ class Mission
 					};
 					id=12652;
 					type="I_APC_tracked_03_cannon_F";
-					atlOffset=4.9689159;
+					atlOffset=4.9689999;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17709,7 +17595,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="private _compile = toString {}; " \n "this setObjectTextureGlobal [0, ""skins\ATF\varsuk\varsuk_0.paa""];  " \n "this setObjectTextureGlobal [1, ""skins\ATF\varsuk\varsuk_1.paa""]; " \n "this setObjectTextureGlobal [2, ""skins\ATF\varsuk\varsuk_2.paa""];  " \n "this setObjectTextureGlobal [3, ""skins\ATF\camo.paa""];" \n "[this, ""РСЗО Замак"", _compile, ""VEH_LIST_TANK"", [120, true, false]] remoteExec [""srv_fnc_addVeh""];";
+						init="private _compile = toString {}; " \n "[this, ""РСЗО Замак"", _compile, ""VEH_LIST_TANK"", [120, true, false]] remoteExec [""srv_fnc_addVeh""];";
 						dynamicSimulation=1;
 					};
 					id=12653;
@@ -20008,8 +19894,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15992.139,14.650268,16980.24};
-				angles[]={0.0047802664,4.6790333,0.00036520581};
+				position[]={15992.139,14.650624,16980.24};
+				angles[]={0.0047822017,4.6790357,0.00036651915};
 			};
 			side="Empty";
 			flags=4;
@@ -20019,7 +19905,7 @@ class Mission
 			};
 			id=18676;
 			type="C_IDAP_UAV_06_antimine_F";
-			atlOffset=0.063698769;
+			atlOffset=0.064055443;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -20328,19 +20214,19 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={15990.426,15.620241,16987.436};
-												angles[]={0.0039849957,6.2445951,6.2794199};
+												position[]={15990.426,15.620245,16987.436};
+												angles[]={0.0039793504,6.244596,6.2794151};
 											};
 											side="Empty";
 											flags=4;
 											class Attributes
 											{
-												init="this setvariable [""lock_hn_cargo"",false];" \n "[this,0,true] call srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "this setObjectTextureGlobal [0, ""skins\Infantry\saif\saif_0.paa""]; " \n "this setObjectTextureGlobal [1, ""skins\Infantry\saif\saif_1.paa""];  " \n "this setObjectTextureGlobal [2, ""skins\Infantry\marid\marid_2.paa""]; " \n "";
+												init="this setvariable [""lock_hn_cargo"",false];" \n "[this,0,true] call srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "";
 												reportOwnPosition=1;
 											};
 											id=6253;
 											type="O_T_UGV_01_rcws_ghex_F";
-											atlOffset=-0.0020036697;
+											atlOffset=-0.001999855;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -22971,19 +22857,20 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={14101.936,22.026827,15990.498};
+												position[]={14101.936,22.02635,15990.498};
 												angles[]={0,5.7926431,0};
 											};
 											side="Empty";
 											class Attributes
 											{
-												init="this setvariable [""lock_hn_cargo"",true];" \n "[this,0,true] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "this setObjectTextureGlobal [0, ""skins\Infantry\zamak\zamak_0.paa""]; " \n "this setObjectTextureGlobal [1, ""skins\Infantry\zamak\zamak_med\zamakMed_02.paa""]; ";
+												init="this setvariable [""lock_hn_cargo"",true];" \n "[this,0,true] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];";
 												name="veh_med_2";
+												textures="GreenHex";
 												aiRadarUsage=2;
 											};
 											id=4832;
 											type="O_T_Truck_02_Medical_F";
-											atlOffset=0.38947678;
+											atlOffset=0.38899994;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -22999,7 +22886,57 @@ class Mission
 														};
 													};
 												};
-												nAttributes=1;
+												class Attribute1
+												{
+													property="VehicleCustomization";
+													expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+													class Value
+													{
+														class data
+														{
+															singleType="ARRAY";
+															class value
+															{
+																items=2;
+																class Item0
+																{
+																	class data
+																	{
+																		singleType="ARRAY";
+																		class value
+																		{
+																			items=2;
+																			class Item0
+																			{
+																				class data
+																				{
+																					singleType="STRING";
+																					value="GreenHex";
+																				};
+																			};
+																			class Item1
+																			{
+																				class data
+																				{
+																					singleType="SCALAR";
+																					value=1;
+																				};
+																			};
+																		};
+																	};
+																};
+																class Item1
+																{
+																	class data
+																	{
+																		singleType="ARRAY";
+																	};
+																};
+															};
+														};
+													};
+												};
+												nAttributes=2;
 											};
 										};
 										class Item73
@@ -23548,7 +23485,7 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												init="this setvariable [""lock_hn_cargo"",true];" \n "[this,0,true] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "this setObjectTextureGlobal [0, ""skins\Infantry\zamak\zamak_0.paa""]; " \n "this setObjectTextureGlobal [1, ""skins\Infantry\zamak\zamak_bk_rem\zamakBkRem_2.paa""]; ";
+												init="this setvariable [""lock_hn_cargo"",true];" \n "[this,0,true] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];";
 												name="veh_repair_dostavka_2";
 												aiRadarUsage=2;
 											};
@@ -23655,7 +23592,7 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												init="this setvariable [""lock_hn_cargo"",true];" \n "[this,0,true] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "this setObjectTextureGlobal [0, ""skins\Infantry\zamak\zamak_0.paa""]; " \n "this setObjectTextureGlobal [1, ""skins\Infantry\zamak\zamak_bk_rem\zamakBkRem_2.paa""]; ";
+												init="this setvariable [""lock_hn_cargo"",true];" \n "[this,0,true] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];";
 												name="veh_rearm_dostavka_2";
 												aiRadarUsage=2;
 											};
@@ -24146,19 +24083,19 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={15940.854,19.256279,17162.492};
-												angles[]={0.0039967569,2.602984,0.0039967569};
+												position[]={15940.854,19.256699,17162.492};
+												angles[]={0.0039968039,2.602984,0.0039968039};
 											};
 											side="Empty";
 											class Attributes
 											{
-												init="this setvariable [""lock_hn_cargo"",true];" \n "[this,60,false] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "this setObjectTextureGlobal [0, ""skins\Infantry\tempest\tempest_0.paa""];  this setObjectTextureGlobal [1, ""skins\Infantry\tempest\tempest_1.paa""]; " \n " this setObjectTextureGlobal [2, ""skins\Infantry\tempest\tempest_rem\tempestRem_2.paa""];";
+												init="this setvariable [""lock_hn_cargo"",true];" \n "[this,60,false] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "";
 												name="veh_repair_btv_1";
 												dynamicSimulation=1;
 											};
 											id=7124;
 											type="O_Truck_03_repair_F";
-											atlOffset=1.9015799;
+											atlOffset=1.9019995;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -24324,8 +24261,8 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={16056.427,15.717209,16850.203};
-												angles[]={0.0093286335,0,6.2765174};
+												position[]={16056.427,15.717404,16850.203};
+												angles[]={0.0093200579,0,6.2765183};
 											};
 											side="Empty";
 											flags=4;
@@ -24337,7 +24274,7 @@ class Mission
 											};
 											id=4377;
 											type="O_T_Truck_03_fuel_ghex_F";
-											atlOffset=-0.00019454956;
+											atlOffset=9.5367432e-007;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -24397,19 +24334,20 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={15935.529,19.215744,17159.592};
-												angles[]={6.2805333,2.5883391,0.010664274};
+												position[]={15935.529,19.215715,17159.592};
+												angles[]={6.2805324,2.5883405,0.010663962};
 											};
 											side="Empty";
 											class Attributes
 											{
-												init="this setvariable [""lock_hn_cargo"",true];" \n "[this,60,false] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "this setObjectTextureGlobal [0, ""skins\Infantry\tempest\tempest_0.paa""]; " \n "this setObjectTextureGlobal [1, ""skins\Infantry\tempest\tempest_1.paa""]; " \n "this setObjectTextureGlobal [2, ""skins\Infantry\tempest\tempest_oil\tempestOil_2.paa""]; ";
+												init="this setvariable [""lock_hn_cargo"",true];" \n "[this,60,false] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "";
 												name="veh_refuel_btv_1";
+												textures="Hex";
 												dynamicSimulation=1;
 											};
 											id=7123;
 											type="O_Truck_03_fuel_F";
-											atlOffset=1.8280277;
+											atlOffset=1.8279991;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -24425,7 +24363,57 @@ class Mission
 														};
 													};
 												};
-												nAttributes=1;
+												class Attribute1
+												{
+													property="VehicleCustomization";
+													expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+													class Value
+													{
+														class data
+														{
+															singleType="ARRAY";
+															class value
+															{
+																items=2;
+																class Item0
+																{
+																	class data
+																	{
+																		singleType="ARRAY";
+																		class value
+																		{
+																			items=2;
+																			class Item0
+																			{
+																				class data
+																				{
+																					singleType="STRING";
+																					value="Hex";
+																				};
+																			};
+																			class Item1
+																			{
+																				class data
+																				{
+																					singleType="SCALAR";
+																					value=1;
+																				};
+																			};
+																		};
+																	};
+																};
+																class Item1
+																{
+																	class data
+																	{
+																		singleType="ARRAY";
+																	};
+																};
+															};
+														};
+													};
+												};
+												nAttributes=2;
 											};
 										};
 										class Item111
@@ -24439,7 +24427,7 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												init="this setvariable [""lock_hn_cargo"",true];" \n "[this,0,true] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "this setObjectTextureGlobal [0, ""skins\Infantry\zamak\zamak_0.paa""]; " \n "this setObjectTextureGlobal [1, ""skins\Infantry\zamak\zamak_oil\zamakOil_2.paa""];";
+												init="this setvariable [""lock_hn_cargo"",true];" \n "[this,0,true] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "";
 												name="veh_refuel_dostavka_2";
 												aiRadarUsage=2;
 											};
@@ -24899,7 +24887,7 @@ class Mission
 											flags=4;
 											class Attributes
 											{
-												init="private _compile = toString {}; " \n "this setObjectTextureGlobal [0, ""skins\ATF\sochor\sochor_0.paa""];  " \n "this setObjectTextureGlobal [1, ""skins\ATF\sochor\sochor_1.paa""]; " \n "this setObjectTextureGlobal [2, ""skins\ATF\sochor\sochor_2.paa""];  " \n "this setObjectTextureGlobal [3, ""skins\ATF\turret.paa""];  " \n "this setObjectTextureGlobal [4, ""skins\ATF\camo.paa""]; " \n "[this, ""2С9 Сохор"", _compile, ""VEH_LIST_TANK"", [120, true, false]] remoteExec [""srv_fnc_addVeh""];";
+												init="private _compile = toString {}; " \n "[this, ""2С9 Сохор"", _compile, ""VEH_LIST_TANK"", [120, true, false]] remoteExec [""srv_fnc_addVeh""];";
 												name="veh_aps_10";
 												textures="Hex";
 												dynamicSimulation=1;
@@ -25054,8 +25042,9 @@ class Mission
 											flags=4;
 											class Attributes
 											{
-												init="[this,900,false] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "this setObjectTextureGlobal [0, ""skins\FCC\gryphon\gryphon_0.paa""];  " \n "this setObjectTextureGlobal [1, ""skins\FCC\gryphon\gryphon_1.paa""];";
+												init="[this,900,false] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "";
 												name="veh_pylonmanager_4";
+												textures="DigitalCamoGrey";
 												reportRemoteTargets=1;
 												receiveRemoteTargets=1;
 												reportOwnPosition=1;
@@ -25065,6 +25054,60 @@ class Mission
 											id=9853;
 											type="I_Plane_Fighter_04_F";
 											atlOffset=1.9073486e-006;
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="VehicleCustomization";
+													expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+													class Value
+													{
+														class data
+														{
+															singleType="ARRAY";
+															class value
+															{
+																items=2;
+																class Item0
+																{
+																	class data
+																	{
+																		singleType="ARRAY";
+																		class value
+																		{
+																			items=2;
+																			class Item0
+																			{
+																				class data
+																				{
+																					singleType="STRING";
+																					value="DigitalCamoGrey";
+																				};
+																			};
+																			class Item1
+																			{
+																				class data
+																				{
+																					singleType="SCALAR";
+																					value=1;
+																				};
+																			};
+																		};
+																	};
+																};
+																class Item1
+																{
+																	class data
+																	{
+																		singleType="ARRAY";
+																	};
+																};
+															};
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item126
 										{
@@ -25078,8 +25121,9 @@ class Mission
 											flags=4;
 											class Attributes
 											{
-												init="[this,900,false] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "this setObjectTextureGlobal [0, ""skins\FCC\gryphon\gryphon_0.paa""];  " \n "this setObjectTextureGlobal [1, ""skins\FCC\gryphon\gryphon_1.paa""];";
+												init="[this,900,false] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "";
 												name="veh_pylonmanager_3";
+												textures="DigitalCamoGrey";
 												reportRemoteTargets=1;
 												receiveRemoteTargets=1;
 												reportOwnPosition=1;
@@ -25088,19 +25132,73 @@ class Mission
 											};
 											id=9854;
 											type="I_Plane_Fighter_04_F";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="VehicleCustomization";
+													expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+													class Value
+													{
+														class data
+														{
+															singleType="ARRAY";
+															class value
+															{
+																items=2;
+																class Item0
+																{
+																	class data
+																	{
+																		singleType="ARRAY";
+																		class value
+																		{
+																			items=2;
+																			class Item0
+																			{
+																				class data
+																				{
+																					singleType="STRING";
+																					value="DigitalCamoGrey";
+																				};
+																			};
+																			class Item1
+																			{
+																				class data
+																				{
+																					singleType="SCALAR";
+																					value=1;
+																				};
+																			};
+																		};
+																	};
+																};
+																class Item1
+																{
+																	class data
+																	{
+																		singleType="ARRAY";
+																	};
+																};
+															};
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item127
 										{
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={15955.623,22.493372,17148.059};
+												position[]={15955.623,22.493807,17148.061};
 												angles[]={0.020001473,0,0.0026703537};
 											};
 											side="Empty";
 											class Attributes
 											{
-												init="[this,0,true] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "this setvariable [""lock_hn_cargo"",false];" \n "this setObjectTextureGlobal [0, ""skins\ATF\gargona\gargona_0.paa""];  " \n "this setObjectTextureGlobal [1, ""skins\ATF\gargona\gargona_1.paa""];  " \n "this setObjectTextureGlobal [2, ""skins\ATF\rcw30.paa""];  " \n "this setObjectTextureGlobal [3, ""skins\ATF\gargona\gargona_3.paa""];  " \n "this setObjectTextureGlobal [4, ""skins\ATF\camo.paa""]; " \n "this setObjectTextureGlobal [5, ""skins\ATF\armor.paa""];  " \n "";
+												init="[this,0,true] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "this setvariable [""lock_hn_cargo"",false];" \n "";
 												name="veh_aps_13";
 												textures="Guerilla_03";
 												dynamicSimulation=1;
@@ -25111,7 +25209,7 @@ class Mission
 											};
 											id=7125;
 											type="I_APC_Wheeled_03_cannon_F";
-											atlOffset=4.8165655;
+											atlOffset=4.8170004;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -25249,13 +25347,13 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={15948.911,19.116383,17137.59};
-												angles[]={0.0026520467,3.1805077,0.0013372133};
+												position[]={15948.911,19.116831,17137.59};
+												angles[]={0.0026529003,3.1805134,0.0013439035};
 											};
 											side="Empty";
 											class Attributes
 											{
-												init="[this,0,true] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "this setObjectTextureGlobal [0, ""skins\ATF\nyx\nyx_0.paa""]; " \n "this setObjectTextureGlobal [1, ""skins\ATF\nyx\nyx_1.paa""]; " \n "this setObjectTextureGlobal [2, ""skins\ATF\camo.paa""]; " \n "this setObjectTextureGlobal [3, ""skins\ATF\armor.paa""]; ";
+												init="[this,0,true] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "";
 												name="veh_aps_1";
 												textures="Indep_Olive";
 												dynamicSimulation=1;
@@ -25265,7 +25363,7 @@ class Mission
 											};
 											id=7201;
 											type="I_LT_01_AT_F";
-											atlOffset=1.9125519;
+											atlOffset=1.9130001;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -25387,13 +25485,13 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={15940.755,19.155445,17138.244};
-												angles[]={0.010664274,3.1787174,6.2751846};
+												position[]={15940.755,19.155792,17138.244};
+												angles[]={0.010663962,3.1787157,6.2751913};
 											};
 											side="Empty";
 											class Attributes
 											{
-												init="[this,0,true] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "this setObjectTextureGlobal [0, ""skins\ATF\nyx\nyx_0.paa""]; " \n "this setObjectTextureGlobal [1, ""skins\ATF\nyx\nyx_1.paa""]; " \n "this setObjectTextureGlobal [2, ""skins\ATF\camo.paa""]; " \n "this setObjectTextureGlobal [3, ""skins\ATF\armor.paa""]; ";
+												init="[this,0,true] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "";
 												name="veh_aps_3";
 												textures="Indep_Olive";
 												dynamicSimulation=1;
@@ -25403,7 +25501,7 @@ class Mission
 											};
 											id=7200;
 											type="I_LT_01_AA_F";
-											atlOffset=1.9606543;
+											atlOffset=1.9610014;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -25532,7 +25630,7 @@ class Mission
 											flags=4;
 											class Attributes
 											{
-												init="private _compile = toString {}; " \n "this setObjectTextureGlobal [0, ""skins\ATF\nyx\nyx_0.paa""]; " \n "this setObjectTextureGlobal [1, ""skins\ATF\nyx\nyx_1.paa""]; " \n "this setObjectTextureGlobal [2, ""skins\ATF\camo.paa""];" \n "[this, ""AWC 303 Никс (Радар)"", _compile, ""VEH_LIST_TANK"", [120, true, false]] remoteExec [""srv_fnc_addVeh""];";
+												init="private _compile = toString {}; " \n "[this, ""AWC 303 Никс (Радар)"", _compile, ""VEH_LIST_TANK"", [120, true, false]] remoteExec [""srv_fnc_addVeh""];";
 												name="veh_aps_6";
 												textures="Indep_Olive";
 												dynamicSimulation=1;
@@ -25664,13 +25762,13 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={15948.728,22.444059,17148.393};
+												position[]={15948.728,22.443802,17148.393};
 												angles[]={0.016004669,0,6.2658539};
 											};
 											side="Empty";
 											class Attributes
 											{
-												init="[this,0,true] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "this setvariable [""lock_hn_cargo"",false];" \n "this setObjectTextureGlobal [0, ""skins\ATF\kamysh\kamysh_0.paa""];  " \n "this setObjectTextureGlobal [1, ""skins\ATF\kamysh\kamysh_1.paa""]; " \n "this setObjectTextureGlobal [2, ""skins\ATF\rcw30.paa""];  " \n "this setObjectTextureGlobal [3, ""skins\ATF\camo.paa""];  " \n "this setObjectTextureGlobal [4, ""skins\ATF\armor.paa""];";
+												init="[this,0,true] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "this setvariable [""lock_hn_cargo"",false];" \n "";
 												name="veh_aps_12";
 												textures="GreenHex";
 												dynamicSimulation=1;
@@ -25681,7 +25779,7 @@ class Mission
 											};
 											id=7039;
 											type="O_T_APC_Tracked_02_cannon_ghex_F";
-											atlOffset=4.8212576;
+											atlOffset=4.8210001;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -25810,7 +25908,8 @@ class Mission
 											flags=4;
 											class Attributes
 											{
-												init="[this,600,false] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "this setObjectTextureGlobal [0, ""skins\FCC\mohawk\mohawk_0.paa""];  " \n "this setObjectTextureGlobal [1, ""skins\FCC\mohawk\mohawk_1.paa""];  " \n "this setObjectTextureGlobal [2, ""skins\FCC\mohawk\mohawk_2.paa""]; ";
+												init="[this,600,false] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];";
+												textures="AAF";
 												dynamicSimulation=1;
 												reportRemoteTargets=1;
 												receiveRemoteTargets=1;
@@ -25833,7 +25932,57 @@ class Mission
 														};
 													};
 												};
-												nAttributes=1;
+												class Attribute1
+												{
+													property="VehicleCustomization";
+													expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+													class Value
+													{
+														class data
+														{
+															singleType="ARRAY";
+															class value
+															{
+																items=2;
+																class Item0
+																{
+																	class data
+																	{
+																		singleType="ARRAY";
+																		class value
+																		{
+																			items=2;
+																			class Item0
+																			{
+																				class data
+																				{
+																					singleType="STRING";
+																					value="AAF";
+																				};
+																			};
+																			class Item1
+																			{
+																				class data
+																				{
+																					singleType="SCALAR";
+																					value=1;
+																				};
+																			};
+																		};
+																	};
+																};
+																class Item1
+																{
+																	class data
+																	{
+																		singleType="ARRAY";
+																	};
+																};
+															};
+														};
+													};
+												};
+												nAttributes=2;
 											};
 										};
 										class Item133
@@ -25848,7 +25997,7 @@ class Mission
 											flags=4;
 											class Attributes
 											{
-												init="[this,600,false] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "this setObjectTextureGlobal [0, ""skins\FCC\mohawk\mohawk_0.paa""];  " \n "this setObjectTextureGlobal [1, ""skins\FCC\mohawk\mohawk_1.paa""];  " \n "this setObjectTextureGlobal [2, ""skins\FCC\mohawk\mohawk_2.paa""]; ";
+												init="[this,600,false] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];";
 												dynamicSimulation=1;
 												reportRemoteTargets=1;
 												receiveRemoteTargets=1;
@@ -25880,14 +26029,14 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={14204.582,22.486059,16064.8};
+												position[]={14204.582,22.487059,16064.8};
 												angles[]={6.2485409,1.8141825,6.2485409};
 											};
 											side="Empty";
 											flags=4;
 											class Attributes
 											{
-												init="[this,600,false] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "this setObjectTextureGlobal [0, ""skins\FCC\hummingbird\hummingbird.paa""];";
+												init="[this,600,false] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];";
 												dynamicSimulation=1;
 												reportRemoteTargets=1;
 												receiveRemoteTargets=1;
@@ -25895,7 +26044,6 @@ class Mission
 											};
 											id=9860;
 											type="B_Heli_Light_01_F";
-											atlOffset=-0.00099945068;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -25911,7 +26059,121 @@ class Mission
 														};
 													};
 												};
-												nAttributes=1;
+												class Attribute1
+												{
+													property="VehicleCustomization";
+													expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+													class Value
+													{
+														class data
+														{
+															singleType="ARRAY";
+															class value
+															{
+																items=2;
+																class Item0
+																{
+																	class data
+																	{
+																		singleType="ARRAY";
+																	};
+																};
+																class Item1
+																{
+																	class data
+																	{
+																		singleType="ARRAY";
+																		class value
+																		{
+																			items=10;
+																			class Item0
+																			{
+																				class data
+																				{
+																					singleType="STRING";
+																					value="AddBenches";
+																				};
+																			};
+																			class Item1
+																			{
+																				class data
+																				{
+																					singleType="SCALAR";
+																					value=1;
+																				};
+																			};
+																			class Item2
+																			{
+																				class data
+																				{
+																					singleType="STRING";
+																					value="AddTread";
+																				};
+																			};
+																			class Item3
+																			{
+																				class data
+																				{
+																					singleType="SCALAR";
+																					value=1;
+																				};
+																			};
+																			class Item4
+																			{
+																				class data
+																				{
+																					singleType="STRING";
+																					value="AddBackseats";
+																				};
+																			};
+																			class Item5
+																			{
+																				class data
+																				{
+																					singleType="SCALAR";
+																					value=1;
+																				};
+																			};
+																			class Item6
+																			{
+																				class data
+																				{
+																					singleType="STRING";
+																					value="AddHoldingFrame";
+																				};
+																			};
+																			class Item7
+																			{
+																				class data
+																				{
+																					singleType="SCALAR";
+																					value=0;
+																				};
+																			};
+																			class Item8
+																			{
+																				class data
+																				{
+																					singleType="STRING";
+																					value="AddTread_Short";
+																				};
+																			};
+																			class Item9
+																			{
+																				class data
+																				{
+																					singleType="SCALAR";
+																					value=0;
+																				};
+																			};
+																		};
+																	};
+																};
+															};
+														};
+													};
+												};
+												nAttributes=2;
 											};
 										};
 										class Item135
@@ -25926,7 +26188,7 @@ class Mission
 											flags=4;
 											class Attributes
 											{
-												init="[this,600,false] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "this setObjectTextureGlobal [0, ""skins\FCC\hummingbird\hummingbird.paa""];";
+												init="[this,600,false] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];";
 												dynamicSimulation=1;
 												reportRemoteTargets=1;
 												receiveRemoteTargets=1;
@@ -26054,7 +26316,7 @@ class Mission
 											flags=4;
 											class Attributes
 											{
-												init="[this,900,false] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "this setObjectTextureGlobal [0, ""skins\FCC\kajman\kajman_0.paa""];  " \n "this setObjectTextureGlobal [1, ""skins\FCC\kajman\kajman_1.paa""];";
+												init="[this,900,false] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "";
 												name="veh_pylonmanager_2";
 												dynamicSimulation=1;
 												pylons="PylonRack_1Rnd_Missile_AA_03_F;PylonRack_4Rnd_LG_scalpel[0];PylonRack_20Rnd_Rocket_03_HE_F;PylonRack_1Rnd_Missile_AA_03_F;";
@@ -26092,6 +26354,7 @@ class Mission
 											class Attributes
 											{
 												init="[this,600,false] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "";
+												textures="Black";
 												dynamicSimulation=1;
 												reportRemoteTargets=1;
 												receiveRemoteTargets=1;
@@ -26115,7 +26378,57 @@ class Mission
 														};
 													};
 												};
-												nAttributes=1;
+												class Attribute1
+												{
+													property="VehicleCustomization";
+													expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+													class Value
+													{
+														class data
+														{
+															singleType="ARRAY";
+															class value
+															{
+																items=2;
+																class Item0
+																{
+																	class data
+																	{
+																		singleType="ARRAY";
+																		class value
+																		{
+																			items=2;
+																			class Item0
+																			{
+																				class data
+																				{
+																					singleType="STRING";
+																					value="Black";
+																				};
+																			};
+																			class Item1
+																			{
+																				class data
+																				{
+																					singleType="SCALAR";
+																					value=1;
+																				};
+																			};
+																		};
+																	};
+																};
+																class Item1
+																{
+																	class data
+																	{
+																		singleType="ARRAY";
+																	};
+																};
+															};
+														};
+													};
+												};
+												nAttributes=2;
 											};
 										};
 										class Item139
@@ -26129,7 +26442,7 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												init="private _compile = toString {}; " \n "this setObjectTextureGlobal [0, ""skins\ATF\rhino\rhino_0.paa""];   " \n "this setObjectTextureGlobal [1, ""skins\ATF\rhino\rhino_1.paa""];  " \n "this setObjectTextureGlobal [2, ""skins\ATF\rhino\rhino_2.paa""];   " \n "this setObjectTextureGlobal [3, ""skins\ATF\rhino\rhino_3.paa""];   " \n "this setObjectTextureGlobal [4, ""skins\ATF\rhino\rhino_4.paa""];   " \n "this setObjectTextureGlobal [5, ""skins\ATF\camo.paa""];  " \n "[this, ""Rhino MGS UP"", _compile, ""VEH_LIST_TANK"", [120, true, false]] remoteExec [""srv_fnc_addVeh""]; " \n "";
+												init="private _compile = toString {}; " \n "[this, ""Rhino MGS UP"", _compile, ""VEH_LIST_TANK"", [120, true, false]] remoteExec [""srv_fnc_addVeh""]; " \n "";
 												name="veh_aps_9";
 												textures="Green";
 												dynamicSimulation=1;
@@ -26252,7 +26565,7 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												init="private _compile = toString {}; " \n "this setObjectTextureGlobal [0, ""skins\ATF\varsuk\varsuk_0.paa""];   " \n "this setObjectTextureGlobal [1, ""skins\ATF\varsuk\varsuk_1.paa""];  " \n "this setObjectTextureGlobal [2, ""skins\ATF\varsuk\varsuk_2.paa""];   " \n "this setObjectTextureGlobal [3, ""skins\ATF\camo.paa""]; " \n "[this, ""T100 Varsuk"", _compile, ""VEH_LIST_TANK"", [120, true, false]] remoteExec [""srv_fnc_addVeh""];";
+												init="private _compile = toString {}; " \n "[this, ""T100 Varsuk"", _compile, ""VEH_LIST_TANK"", [120, true, false]] remoteExec [""srv_fnc_addVeh""];";
 												name="veh_aps_7";
 												textures="Hex";
 												dynamicSimulation=1;
@@ -26375,7 +26688,7 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												init="private _compile = toString {}; " \n "this setObjectTextureGlobal [0, ""skins\ATF\angara\angara_0.paa""];   " \n "this setObjectTextureGlobal [1, ""skins\ATF\angara\angara_1.paa""];   " \n "this setObjectTextureGlobal [2, ""skins\ATF\camo.paa""]; " \n "[this, ""T140 Angara"", _compile, ""VEH_LIST_TANK"", [120, true, false]] remoteExec [""srv_fnc_addVeh""]; " \n "";
+												init="private _compile = toString {}; " \n "[this, ""T140 Angara"", _compile, ""VEH_LIST_TANK"", [120, true, false]] remoteExec [""srv_fnc_addVeh""]; " \n "";
 												name="veh_aps_8";
 												textures="Hex";
 												dynamicSimulation=1;
@@ -26512,13 +26825,13 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={15949.85,16.639212,16984.293};
-												angles[]={0.0080287326,6.2290583,6.2582631};
+												position[]={15949.85,16.639418,16984.293};
+												angles[]={0.0080285147,6.2290626,6.2582617};
 											};
 											side="Empty";
 											class Attributes
 											{
-												init="this setVariable [""veh_lock_rearm"",true];" \n "this setvariable [""lock_hn_cargo"",false];" \n "[this,0,true] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "this setObjectTextureGlobal [0, ""skins\Infantry\tempest\tempest_0.paa""];  this setObjectTextureGlobal [1, ""skins\Infantry\tempest\tempest_1.paa""];" \n "this setObjectTextureGlobal [2, ""skins\Infantry\tempest\tempest_rem\tempestRem_2.paa""];";
+												init="this setVariable [""veh_lock_rearm"",true];" \n "this setvariable [""lock_hn_cargo"",false];" \n "[this,0,true] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "";
 												name="veh_rearm_bk_2";
 												dynamicSimulation=1;
 												reportRemoteTargets=1;
@@ -26527,7 +26840,7 @@ class Mission
 											};
 											id=9417;
 											type="O_Truck_03_ammo_F";
-											atlOffset=0.37779427;
+											atlOffset=0.37800026;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -26551,14 +26864,14 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={15954.926,16.481087,16984.582};
-												angles[]={6.278779,6.2336321,6.2642894};
+												position[]={15954.926,16.481487,16984.582};
+												angles[]={6.2787867,6.2336354,6.2642832};
 											};
 											side="Empty";
 											flags=4;
 											class Attributes
 											{
-												init="this setVariable [""veh_lock_rearm"",true];" \n "this setvariable [""lock_hn_cargo"",false];" \n "[this,0,true] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "this setObjectTextureGlobal [0, ""skins\Infantry\tempest\tempest_0.paa""];  this setObjectTextureGlobal [1, ""skins\Infantry\tempest\tempest_1.paa""];" \n "this setObjectTextureGlobal [2, ""skins\Infantry\tempest\tempest_rem\tempestRem_2.paa""];";
+												init="this setVariable [""veh_lock_rearm"",true];" \n "this setvariable [""lock_hn_cargo"",false];" \n "[this,0,true] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "";
 												name="veh_rearm_bk_1";
 												dynamicSimulation=1;
 												reportRemoteTargets=1;
@@ -26567,7 +26880,7 @@ class Mission
 											};
 											id=9418;
 											type="O_Truck_03_ammo_F";
-											atlOffset=0.23460007;
+											atlOffset=0.23500061;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -26598,7 +26911,7 @@ class Mission
 											flags=4;
 											class Attributes
 											{
-												init="[this,900,false] spawn srv_fnc_veh_handle_respawn; " \n "this setVariable [""dnt_remove_me"",true];" \n "this setObjectTextureGlobal [0, ""skins\FCC\neophron\neophron_0.paa""];  " \n "this setObjectTextureGlobal [1, ""skins\FCC\neophron\neophron_1.paa""];";
+												init="[this,900,false] spawn srv_fnc_veh_handle_respawn; " \n "this setVariable [""dnt_remove_me"",true];";
 												name="veh_pylonmanager_7";
 												reportRemoteTargets=1;
 												receiveRemoteTargets=1;
@@ -26621,7 +26934,7 @@ class Mission
 											flags=4;
 											class Attributes
 											{
-												init="[this,900,false] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "this setObjectTextureGlobal [0, ""skins\FCC\neophron\neophron_0.paa""];  " \n "this setObjectTextureGlobal [1, ""skins\FCC\neophron\neophron_1.paa""];";
+												init="[this,900,false] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];";
 												name="veh_pylonmanager_6";
 												reportRemoteTargets=1;
 												receiveRemoteTargets=1;
@@ -26721,9 +27034,9 @@ class Mission
 											flags=4;
 											class Attributes
 											{
-												init="[this,600,false] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "this setObjectTextureGlobal [0, ""skins\FCC\blackfish\blackfish_0.paa""];  " \n "this setObjectTextureGlobal [1, ""skins\FCC\blackfish\blackfish_1.paa""];  " \n "this setObjectTextureGlobal [2, ""skins\FCC\blackfish\blackfish_2.paa""];  " \n "this setObjectTextureGlobal [3, ""skins\FCC\blackfish\blackfish_3.paa""];  " \n "";
+												init="[this,600,false] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];";
 												name="veh_canloadbk";
-												textures="Blue";
+												textures="Olive";
 												dynamicSimulation=1;
 												reportRemoteTargets=1;
 												receiveRemoteTargets=1;
@@ -26747,7 +27060,57 @@ class Mission
 														};
 													};
 												};
-												nAttributes=1;
+												class Attribute1
+												{
+													property="VehicleCustomization";
+													expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+													class Value
+													{
+														class data
+														{
+															singleType="ARRAY";
+															class value
+															{
+																items=2;
+																class Item0
+																{
+																	class data
+																	{
+																		singleType="ARRAY";
+																		class value
+																		{
+																			items=2;
+																			class Item0
+																			{
+																				class data
+																				{
+																					singleType="STRING";
+																					value="Olive";
+																				};
+																			};
+																			class Item1
+																			{
+																				class data
+																				{
+																					singleType="SCALAR";
+																					value=1;
+																				};
+																			};
+																		};
+																	};
+																};
+																class Item1
+																{
+																	class data
+																	{
+																		singleType="ARRAY";
+																	};
+																};
+															};
+														};
+													};
+												};
+												nAttributes=2;
 											};
 										};
 										class Item149
@@ -26762,8 +27125,8 @@ class Mission
 											flags=4;
 											class Attributes
 											{
-												init="[this,600,false] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "this setObjectTextureGlobal [0, ""skins\FCC\blackfish\blackfish_0.paa""];  " \n "this setObjectTextureGlobal [1, ""skins\FCC\blackfish\blackfish_1.paa""];  " \n "this setObjectTextureGlobal [2, ""skins\FCC\blackfish\blackfish_2.paa""];  " \n "this setObjectTextureGlobal [3, ""skins\FCC\blackfish\blackfish_3.paa""];  " \n "";
-												textures="Blue";
+												init="[this,600,false] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];";
+												textures="Olive";
 												dynamicSimulation=1;
 												reportRemoteTargets=1;
 												receiveRemoteTargets=1;
@@ -26787,7 +27150,57 @@ class Mission
 														};
 													};
 												};
-												nAttributes=1;
+												class Attribute1
+												{
+													property="VehicleCustomization";
+													expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+													class Value
+													{
+														class data
+														{
+															singleType="ARRAY";
+															class value
+															{
+																items=2;
+																class Item0
+																{
+																	class data
+																	{
+																		singleType="ARRAY";
+																		class value
+																		{
+																			items=2;
+																			class Item0
+																			{
+																				class data
+																				{
+																					singleType="STRING";
+																					value="Olive";
+																				};
+																			};
+																			class Item1
+																			{
+																				class data
+																				{
+																					singleType="SCALAR";
+																					value=1;
+																				};
+																			};
+																		};
+																	};
+																};
+																class Item1
+																{
+																	class data
+																	{
+																		singleType="ARRAY";
+																	};
+																};
+															};
+														};
+													};
+												};
+												nAttributes=2;
 											};
 										};
 										class Item150
@@ -26802,7 +27215,7 @@ class Mission
 											flags=4;
 											class Attributes
 											{
-												init="[this,900,false] spawn srv_fnc_veh_handle_respawn; " \n "this setVariable [""dnt_remove_me"",true];" \n "this setObjectTextureGlobal [0, ""skins\FCC\hellcat\hellcat.paa""];";
+												init="[this,900,false] spawn srv_fnc_veh_handle_respawn; " \n "this setVariable [""dnt_remove_me"",true];" \n "";
 												name="veh_pylonmanager_1";
 												dynamicSimulation=1;
 												reportRemoteTargets=1;
@@ -26943,14 +27356,14 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={14137.065,24.961222,16131.094};
+												position[]={14137.065,24.961493,16131.094};
 												angles[]={0,1.8086846,0};
 											};
 											side="Empty";
 											class Attributes
 											{
-												init="[this,600,false] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "this setObjectTextureGlobal [0, ""skins\FCC\xian\xian_0.paa""];  " \n "this setObjectTextureGlobal [1, ""skins\FCC\xian\xian_1.paa""];  " \n "this setObjectTextureGlobal [2, ""skins\FCC\xian\xian_2.paa""];  " \n "this setObjectTextureGlobal [3, ""skins\FCC\xian\xian_2.paa""]; " \n "";
-												textures="Hex";
+												init="[this,600,false] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];";
+												textures="GreenHex";
 												dynamicSimulation=1;
 												reportRemoteTargets=1;
 												receiveRemoteTargets=1;
@@ -26960,47 +27373,7 @@ class Mission
 											};
 											id=2511;
 											type="O_T_VTOL_02_infantry_dynamicLoadout_F";
-											atlOffset=0.54672813;
-											class CustomAttributes
-											{
-												class Attribute0
-												{
-													property="ammoBox";
-													expression="[_this,_value] call bis_fnc_initAmmoBox;";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
-														};
-													};
-												};
-												nAttributes=1;
-											};
-										};
-										class Item153
-										{
-											dataType="Object";
-											class PositionInfo
-											{
-												position[]={14201.396,22.753204,16269.24};
-												angles[]={0,0.73555499,0};
-											};
-											side="Empty";
-											class Attributes
-											{
-												init="[this,60,false] call srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];";
-												textures="Hex";
-												dynamicSimulation=1;
-												reportRemoteTargets=1;
-												receiveRemoteTargets=1;
-												reportOwnPosition=1;
-												aiRadarUsage=2;
-											};
-											id=3364;
-											type="O_APC_Tracked_02_AA_F";
-											atlOffset=0.32706261;
+											atlOffset=0.54699898;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -27033,6 +27406,116 @@ class Mission
 																	class data
 																	{
 																		singleType="ARRAY";
+																		class value
+																		{
+																			items=2;
+																			class Item0
+																			{
+																				class data
+																				{
+																					singleType="STRING";
+																					value="GreenHex";
+																				};
+																			};
+																			class Item1
+																			{
+																				class data
+																				{
+																					singleType="SCALAR";
+																					value=1;
+																				};
+																			};
+																		};
+																	};
+																};
+																class Item1
+																{
+																	class data
+																	{
+																		singleType="ARRAY";
+																	};
+																};
+															};
+														};
+													};
+												};
+												nAttributes=2;
+											};
+										};
+										class Item153
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={14201.396,22.753141,16269.24};
+												angles[]={0,0.7355516,0};
+											};
+											side="Empty";
+											class Attributes
+											{
+												init="[this,60,false] call srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];";
+												textures="Hex";
+												dynamicSimulation=1;
+												reportRemoteTargets=1;
+												receiveRemoteTargets=1;
+												reportOwnPosition=1;
+												aiRadarUsage=2;
+											};
+											id=3364;
+											type="O_APC_Tracked_02_AA_F";
+											atlOffset=0.32699966;
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="ammoBox";
+													expression="[_this,_value] call bis_fnc_initAmmoBox;";
+													class Value
+													{
+														class data
+														{
+															singleType="STRING";
+															value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+														};
+													};
+												};
+												class Attribute1
+												{
+													property="VehicleCustomization";
+													expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+													class Value
+													{
+														class data
+														{
+															singleType="ARRAY";
+															class value
+															{
+																items=2;
+																class Item0
+																{
+																	class data
+																	{
+																		singleType="ARRAY";
+																		class value
+																		{
+																			items=2;
+																			class Item0
+																			{
+																				class data
+																				{
+																					singleType="STRING";
+																					value="Hex";
+																				};
+																			};
+																			class Item1
+																			{
+																				class data
+																				{
+																					singleType="SCALAR";
+																					value=1;
+																				};
+																			};
+																		};
 																	};
 																};
 																class Item1
@@ -27128,7 +27611,7 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												init="private _compile = toString {}; " \n "this setObjectTextureGlobal [0, ""skins\ATF\tigris\tigris_0.paa""];  " \n "this setObjectTextureGlobal [1, ""skins\ATF\tigris\tigris_2.paa""];   " \n "this setObjectTextureGlobal [2, ""skins\ATF\tigris\tigris_1.paa""];  " \n "this setObjectTextureGlobal [3, ""skins\ATF\camo.paa""];  " \n "this setObjectTextureGlobal [4, ""skins\ATF\armor.paa""];  " \n "[this, ""ZSU-39 Tigris"", _compile, ""VEH_LIST_TANK"", [120, true, false]] remoteExec [""srv_fnc_addVeh""]; " \n "";
+												init="private _compile = toString {}; " \n "[this, ""ZSU-39 Tigris"", _compile, ""VEH_LIST_TANK"", [120, true, false]] remoteExec [""srv_fnc_addVeh""]; " \n "";
 												name="veh_aps_11";
 												textures="GreenHex";
 												dynamicSimulation=1;
@@ -27658,20 +28141,20 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={14374.88,27.197948,16245.518};
-												angles[]={0,0.6804285,0};
+												position[]={14374.88,27.198414,16245.518};
+												angles[]={0,0.68043405,0};
 											};
 											side="Empty";
 											class Attributes
 											{
-												init="[this,600,false] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "this setObjectTextureGlobal [0, ""skins\FCC\blackfish\blackfish_0.paa""];  " \n "this setObjectTextureGlobal [1, ""skins\FCC\blackfish\blackfish_1.paa""];  " \n "this setObjectTextureGlobal [2, ""skins\FCC\blackfish\blackfish_2.paa""];  " \n "this setObjectTextureGlobal [3, ""skins\FCC\blackfish\blackfish_3.paa""];  " \n "";
+												init="[this,600,false] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];";
 												reportRemoteTargets=1;
 												receiveRemoteTargets=1;
 												reportOwnPosition=1;
 											};
 											id=12004;
 											type="B_T_VTOL_01_armed_F";
-											atlOffset=0.62853432;
+											atlOffset=0.62899971;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -30504,13 +30987,13 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={15268.832,15.898033,14105.324};
+						position[]={15268.832,15.897675,14105.324};
 						angles[]={0,1.5758229,0};
 					};
 					side="Empty";
 					class Attributes
 					{
-						init="private _compile = toString {}; " \n "this setObjectTextureGlobal [0, ""skins\FCC\mohawk\mohawk_0.paa""];  " \n "this setObjectTextureGlobal [1, ""skins\FCC\mohawk\mohawk_1.paa""];  " \n "this setObjectTextureGlobal [2, ""skins\FCC\mohawk\mohawk_2.paa""]; " \n "[this, ""CH-49 Могавк #1"", _compile, ""VEH_LIST_AIR"", [600, false, false]] remoteExec [""srv_fnc_addVeh""];";
+						init="private _compile = toString {}; " \n "[this, ""CH-49 Могавк #1"", _compile, ""VEH_LIST_AIR"", [600, false, false]] remoteExec [""srv_fnc_addVeh""];";
 						dynamicSimulation=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
@@ -30519,7 +31002,7 @@ class Mission
 					};
 					id=19781;
 					type="I_Heli_Transport_02_F";
-					atlOffset=78.620354;
+					atlOffset=78.619995;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -30543,13 +31026,13 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={15269.293,16.33345,14129.985};
+						position[]={15269.293,16.333771,14129.985};
 						angles[]={0,1.5614064,0};
 					};
 					side="Empty";
 					class Attributes
 					{
-						init="private _compile = toString {}; " \n "this setObjectTextureGlobal [0, ""skins\FCC\mohawk\mohawk_0.paa""];  " \n "this setObjectTextureGlobal [1, ""skins\FCC\mohawk\mohawk_1.paa""];  " \n "this setObjectTextureGlobal [2, ""skins\FCC\mohawk\mohawk_2.paa""]; " \n "[this, ""CH-49 Могавк #2"", _compile, ""VEH_LIST_AIR"", [600, false, false]] remoteExec [""srv_fnc_addVeh""];";
+						init="private _compile = toString {};  " \n "[this, ""CH-49 Могавк #2"", _compile, ""VEH_LIST_AIR"", [600, false, false]] remoteExec [""srv_fnc_addVeh""];";
 						dynamicSimulation=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
@@ -30558,7 +31041,7 @@ class Mission
 					};
 					id=19782;
 					type="I_Heli_Transport_02_F";
-					atlOffset=81.104675;
+					atlOffset=81.104996;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -30582,19 +31065,19 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={15271.096,15.694473,14067.443};
+						position[]={15271.096,15.694611,14067.443};
 						angles[]={0,1.5283325,0};
 					};
 					side="Empty";
 					class Attributes
 					{
-						init="private _compile = toString {}; " \n "this setObjectTextureGlobal [0, ""skins\FCC\hummingbird\hummingbird.paa""];" \n "[this, ""MH-9 Хамминбёрд #1"", _compile, ""VEH_LIST_AIR"", [600, true, false]] remoteExec [""srv_fnc_addVeh""];";
+						init="private _compile = toString {}; " \n "[this, ""MH-9 Хамминбёрд #1"", _compile, ""VEH_LIST_AIR"", [600, true, false]] remoteExec [""srv_fnc_addVeh""];";
 						dynamicSimulation=1;
 						aiRadarUsage=2;
 					};
 					id=19783;
 					type="B_Heli_Light_01_F";
-					atlOffset=80.368866;
+					atlOffset=80.369003;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -30618,13 +31101,13 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={15261.118,13.277191,14203.985};
+						position[]={15261.118,13.277405,14203.985};
 						angles[]={0,1.5754215,0};
 					};
 					side="Empty";
 					class Attributes
 					{
-						init="private _compile = toString {}; " \n "this setObjectTextureGlobal [0, ""skins\FCC\kajman\kajman_0.paa""];  " \n "this setObjectTextureGlobal [1, ""skins\FCC\kajman\kajman_1.paa""];" \n "[this, ""Ми-48 Кайман"", _compile, ""VEH_LIST_AIR"", [900, false, false]] remoteExec [""srv_fnc_addVeh""]; " \n " ";
+						init="private _compile = toString {}; " \n "[this, ""Ми-48 Кайман"", _compile, ""VEH_LIST_AIR"", [900, false, false]] remoteExec [""srv_fnc_addVeh""]; " \n " ";
 						name="veh_pylonmanager_8";
 						textures="Opfor";
 						dynamicSimulation=1;
@@ -30635,7 +31118,7 @@ class Mission
 					};
 					id=19784;
 					type="O_Heli_Attack_02_dynamicLoadout_F";
-					atlOffset=82.726791;
+					atlOffset=82.727005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -30651,7 +31134,57 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						class Attribute1
+						{
+							property="VehicleCustomization";
+							expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+							class Value
+							{
+								class data
+								{
+									singleType="ARRAY";
+									class value
+									{
+										items=2;
+										class Item0
+										{
+											class data
+											{
+												singleType="ARRAY";
+												class value
+												{
+													items=2;
+													class Item0
+													{
+														class data
+														{
+															singleType="STRING";
+															value="Opfor";
+														};
+													};
+													class Item1
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=1;
+														};
+													};
+												};
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												singleType="ARRAY";
+											};
+										};
+									};
+								};
+							};
+						};
+						nAttributes=2;
 					};
 				};
 				class Item31
@@ -30659,14 +31192,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={15261.097,12.172073,14181.43};
+						position[]={15261.097,12.172203,14181.43};
 						angles[]={0,1.5554024,0};
 					};
 					side="Empty";
 					class Attributes
 					{
-						init="private _compile = toString {}; " \n "this setObjectTextureGlobal [0, ""skins\FCC\hellcat\hellcat.paa""];  " \n "[this, ""WY-55 Хелкэт"", _compile, ""VEH_LIST_AIR"", [900, false, false]] remoteExec [""srv_fnc_addVeh""];";
+						init="private _compile = toString {};  " \n "[this, ""WY-55 Хелкэт"", _compile, ""VEH_LIST_AIR"", [900, false, false]] remoteExec [""srv_fnc_addVeh""];";
 						name="veh_pylonmanager_9";
+						textures="Indep";
 						dynamicSimulation=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
@@ -30675,7 +31209,7 @@ class Mission
 					};
 					id=19785;
 					type="I_Heli_light_03_dynamicLoadout_F";
-					atlOffset=82.156868;
+					atlOffset=82.156998;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -30691,7 +31225,57 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						class Attribute1
+						{
+							property="VehicleCustomization";
+							expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+							class Value
+							{
+								class data
+								{
+									singleType="ARRAY";
+									class value
+									{
+										items=2;
+										class Item0
+										{
+											class data
+											{
+												singleType="ARRAY";
+												class value
+												{
+													items=2;
+													class Item0
+													{
+														class data
+														{
+															singleType="STRING";
+															value="Indep";
+														};
+													};
+													class Item1
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=1;
+														};
+													};
+												};
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												singleType="ARRAY";
+											};
+										};
+									};
+								};
+							};
+						};
+						nAttributes=2;
 					};
 				};
 				class Item32
@@ -30699,13 +31283,13 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={15218.017,26.809555,14031.932};
+						position[]={15218.017,26.810127,14031.933};
 						angles[]={0,1.5689813,0};
 					};
 					side="Empty";
 					class Attributes
 					{
-						init="[this,600,false] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "this setObjectTextureGlobal [0, ""skins\FCC\xian\xian_0.paa""];  " \n "this setObjectTextureGlobal [1, ""skins\FCC\xian\xian_1.paa""];  " \n "this setObjectTextureGlobal [2, ""skins\FCC\xian\xian_2.paa""];  " \n "this setObjectTextureGlobal [3, ""skins\FCC\xian\xian_2.paa""]; " \n "";
+						init="[this,600,false] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "";
 						textures="Hex";
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
@@ -30715,7 +31299,7 @@ class Mission
 					};
 					id=19786;
 					type="O_T_VTOL_02_infantry_dynamicLoadout_F";
-					atlOffset=0.44014549;
+					atlOffset=0.4407177;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -30857,7 +31441,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={15215.634,25.277332,14154.415};
+						position[]={15215.634,25.277561,14154.415};
 						angles[]={0,4.7067513,0};
 					};
 					side="Empty";
@@ -30873,7 +31457,7 @@ class Mission
 					};
 					id=19790;
 					type="B_UAV_05_F";
-					atlOffset=0.2476635;
+					atlOffset=0.24789238;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -31639,14 +32223,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={15177.686,25.926048,14245.574};
-						angles[]={0,6.2509413,0};
+						position[]={15177.686,25.925686,14245.574};
+						angles[]={0,6.2509494,0};
 					};
 					side="Empty";
 					flags=4;
 					class Attributes
 					{
-						init="[this,900,false] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "this setObjectTextureGlobal [0, ""skins\FCC\black_wasp\blackwasp_0.paa""]; " \n "this setObjectTextureGlobal [1, ""skins\FCC\black_wasp\blackwasp_1.paa""];  " \n "this setObjectTextureGlobal [3, ""skins\FCC\black_wasp\blackwasp_3.paa""]; " \n "";
+						init="[this,900,false] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "";
 						name="veh_pylonmanager_10";
 						textures="DarkGrey";
 						reportRemoteTargets=1;
@@ -31656,7 +32240,7 @@ class Mission
 					};
 					id=19813;
 					type="B_Plane_Fighter_01_F";
-					atlOffset=0.24849319;
+					atlOffset=0.2481308;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -31992,14 +32576,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={15268.976,12.892914,14044.766};
+						position[]={15268.976,12.893364,14044.766};
 						angles[]={0,1.5403752,0};
 					};
 					side="Empty";
 					class Attributes
 					{
 						init="private _compile = toString {}; " \n "[this, ""Ми-290 Тару"", _compile, ""VEH_LIST_AIR"", [600, false, false]] remoteExec [""srv_fnc_addVeh""];";
-						textures="Opfor";
+						textures="Black";
 						dynamicSimulation=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
@@ -32007,7 +32591,7 @@ class Mission
 					};
 					id=19821;
 					type="O_Heli_Transport_04_F";
-					atlOffset=78.568542;
+					atlOffset=78.568993;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -32035,7 +32619,7 @@ class Mission
 														class data
 														{
 															singleType="STRING";
-															value="Opfor";
+															value="Black";
 														};
 													};
 													class Item1
@@ -32125,7 +32709,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={15495.863,9.7144089,14323.801};
+						position[]={15495.863,9.7144394,14323.801};
 					};
 					side="Empty";
 					flags=4;
@@ -32137,7 +32721,7 @@ class Mission
 					};
 					id=19825;
 					type="Land_Pod_Heli_Transport_04_fuel_F";
-					atlOffset=0.11128426;
+					atlOffset=0.11131477;
 				};
 				class Item65
 				{
@@ -32352,15 +32936,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={15205.309,25.924953,14245.509};
-						angles[]={0,6.1857324,0};
+						position[]={15205.309,25.924454,14245.509};
+						angles[]={0,6.1857257,0};
 					};
 					side="Empty";
 					class Attributes
 					{
-						init="[this,900,false] spawn srv_fnc_veh_handle_respawn; " \n "this setVariable [""dnt_remove_me"",true];" \n "this setObjectTextureGlobal [0, ""skins\FCC\black_wasp\blackwasp_0.paa""]; " \n "this setObjectTextureGlobal [1, ""skins\FCC\black_wasp\blackwasp_1.paa""]; " \n "this setObjectTextureGlobal [3, ""skins\FCC\black_wasp\blackwasp_3.paa""]; " \n "";
+						init="[this,900,false] spawn srv_fnc_veh_handle_respawn; " \n "this setVariable [""dnt_remove_me"",true];" \n "";
 						name="veh_pylonmanager_11";
-						textures="DarkGreyCamo";
+						textures="DarkGrey";
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -32368,7 +32952,7 @@ class Mission
 					};
 					id=19832;
 					type="B_Plane_Fighter_01_Stealth_F";
-					atlOffset=0.2549839;
+					atlOffset=0.25448418;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -32396,7 +32980,7 @@ class Mission
 														class data
 														{
 															singleType="STRING";
-															value="DarkGreyCamo";
+															value="DarkGrey";
 														};
 													};
 													class Item1
@@ -32652,20 +33236,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={15263.465,9.6973877,14086.623};
+						position[]={15263.465,9.6974792,14086.623};
 						angles[]={0,1.5283325,0};
 					};
 					side="Empty";
 					class Attributes
 					{
-						init="private _compile = toString {}; " \n "this setObjectTextureGlobal [0, ""skins\FCC\hummingbird\hummingbird.paa""];" \n "[this, ""MH-9 Хамминбёрд #2"", _compile, ""VEH_LIST_AIR"", [600, true, false]] remoteExec [""srv_fnc_addVeh""];";
+						init="private _compile = toString {}; " \n "[this, ""MH-9 Хамминбёрд #2"", _compile, ""VEH_LIST_AIR"", [600, true, false]] remoteExec [""srv_fnc_addVeh""];";
 						name="upsa_upaa_2";
 						dynamicSimulation=1;
 						aiRadarUsage=2;
 					};
 					id=19839;
 					type="B_Heli_Light_01_F";
-					atlOffset=74.101906;
+					atlOffset=74.101997;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -32836,26 +33420,150 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={15145.773,26.248947,14091.87};
-						angles[]={0,1.5944391,0};
+						position[]={15145.772,26.24889,14091.87};
+						angles[]={0,1.5944456,0};
 					};
 					side="Empty";
 					class Attributes
 					{
 						init="this setvariable [""lock_hn_cargo"",true];" \n "[this, 60,false] spawn srv_fnc_veh_handle_respawn;" \n "this setVariable [""dnt_remove_me"",true];" \n "{ this enableVehicleSensor [_x select 0, false]; } forEach listVehicleSensors this;";
 						name="veh_med_5";
+						textures="Hex";
 						dynamicSimulation=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
+						aiRadarUsage=2;
 					};
 					id=19845;
 					type="O_APC_Tracked_02_AA_F";
-					atlOffset=0.26857376;
+					atlOffset=0.26851654;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="VehicleCustomization";
+							expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+							class Value
+							{
+								class data
+								{
+									singleType="ARRAY";
+									class value
+									{
+										items=2;
+										class Item0
+										{
+											class data
+											{
+												singleType="ARRAY";
+												class value
+												{
+													items=2;
+													class Item0
+													{
+														class data
+														{
+															singleType="STRING";
+															value="Hex";
+														};
+													};
+													class Item1
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=1;
+														};
+													};
+												};
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												singleType="ARRAY";
+												class value
+												{
+													items=8;
+													class Item0
+													{
+														class data
+														{
+															singleType="STRING";
+															value="showTracks";
+														};
+													};
+													class Item1
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=0;
+														};
+													};
+													class Item2
+													{
+														class data
+														{
+															singleType="STRING";
+															value="showCamonetHull";
+														};
+													};
+													class Item3
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=0;
+														};
+													};
+													class Item4
+													{
+														class data
+														{
+															singleType="STRING";
+															value="showCamonetTurret";
+														};
+													};
+													class Item5
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=0;
+														};
+													};
+													class Item6
+													{
+														class data
+														{
+															singleType="STRING";
+															value="showSLATHull";
+														};
+													};
+													class Item7
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=0;
+														};
+													};
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			id=19844;
-			atlOffset=0.26857376;
+			atlOffset=0.26851654;
 		};
 		class Item47
 		{
@@ -33633,15 +34341,15 @@ class Mission
 													dataType="Object";
 													class PositionInfo
 													{
-														position[]={15275.627,13.953499,13949.482};
+														position[]={15275.627,13.953018,13949.482};
 														angles[]={0,1.5048752,0};
 													};
 													side="Empty";
 													class Attributes
 													{
-														init="private _compile = toString {}; " \n "this setObjectTextureGlobal [0, ""skins\FCC\blackfish\blackfish_0.paa""];  " \n "this setObjectTextureGlobal [1, ""skins\FCC\blackfish\blackfish_1.paa""];  " \n "this setObjectTextureGlobal [2, ""skins\FCC\blackfish\blackfish_2.paa""];  " \n "this setObjectTextureGlobal [3, ""skins\FCC\blackfish\blackfish_3.paa""];  " \n "[this, ""V-44 X Блэкфиш (транспортный)"", _compile, ""VEH_LIST_AIR"", [600, false, false]] remoteExec [""srv_fnc_addVeh""];";
+														init="private _compile = toString {}; " \n "[this, ""V-44 X Блэкфиш (транспортный)"", _compile, ""VEH_LIST_AIR"", [600, false, false]] remoteExec [""srv_fnc_addVeh""];";
 														name="veh_canloadbk_1";
-														textures="Blue";
+														textures="Olive";
 														dynamicSimulation=1;
 														reportRemoteTargets=1;
 														receiveRemoteTargets=1;
@@ -33650,7 +34358,7 @@ class Mission
 													};
 													id=19891;
 													type="B_T_VTOL_01_vehicle_F";
-													atlOffset=78.183479;
+													atlOffset=78.182999;
 													class CustomAttributes
 													{
 														class Attribute0
@@ -33666,7 +34374,57 @@ class Mission
 																};
 															};
 														};
-														nAttributes=1;
+														class Attribute1
+														{
+															property="VehicleCustomization";
+															expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+															class Value
+															{
+																class data
+																{
+																	singleType="ARRAY";
+																	class value
+																	{
+																		items=2;
+																		class Item0
+																		{
+																			class data
+																			{
+																				singleType="ARRAY";
+																				class value
+																				{
+																					items=2;
+																					class Item0
+																					{
+																						class data
+																						{
+																							singleType="STRING";
+																							value="Olive";
+																						};
+																					};
+																					class Item1
+																					{
+																						class data
+																						{
+																							singleType="SCALAR";
+																							value=1;
+																						};
+																					};
+																				};
+																			};
+																		};
+																		class Item1
+																		{
+																			class data
+																			{
+																				singleType="ARRAY";
+																			};
+																		};
+																	};
+																};
+															};
+														};
+														nAttributes=2;
 													};
 												};
 												class Item1
@@ -33674,14 +34432,14 @@ class Mission
 													dataType="Object";
 													class PositionInfo
 													{
-														position[]={15282.732,13.843796,13992.591};
+														position[]={15282.732,13.843338,13992.591};
 														angles[]={0,1.5707964,0};
 													};
 													side="Empty";
 													class Attributes
 													{
-														init="private _compile = toString {}; " \n "this setObjectTextureGlobal [0, ""skins\FCC\blackfish\blackfish_0.paa""];  " \n "this setObjectTextureGlobal [1, ""skins\FCC\blackfish\blackfish_1.paa""];  " \n "this setObjectTextureGlobal [2, ""skins\FCC\blackfish\blackfish_2.paa""];  " \n "this setObjectTextureGlobal [3, ""skins\FCC\blackfish\blackfish_3.paa""];  " \n "[this, ""V-44 X Блэкфиш (пехотный)"", _compile, ""VEH_LIST_AIR"", [600, false, false]] remoteExec [""srv_fnc_addVeh""];";
-														textures="Blue";
+														init="private _compile = toString {}; " \n "[this, ""V-44 X Блэкфиш (пехотный)"", _compile, ""VEH_LIST_AIR"", [600, false, false]] remoteExec [""srv_fnc_addVeh""];";
+														textures="Olive";
 														dynamicSimulation=1;
 														reportRemoteTargets=1;
 														receiveRemoteTargets=1;
@@ -33690,7 +34448,7 @@ class Mission
 													};
 													id=19892;
 													type="B_T_VTOL_01_infantry_F";
-													atlOffset=77.215446;
+													atlOffset=77.214989;
 													class CustomAttributes
 													{
 														class Attribute0
@@ -33706,28 +34464,78 @@ class Mission
 																};
 															};
 														};
-														nAttributes=1;
+														class Attribute1
+														{
+															property="VehicleCustomization";
+															expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+															class Value
+															{
+																class data
+																{
+																	singleType="ARRAY";
+																	class value
+																	{
+																		items=2;
+																		class Item0
+																		{
+																			class data
+																			{
+																				singleType="ARRAY";
+																				class value
+																				{
+																					items=2;
+																					class Item0
+																					{
+																						class data
+																						{
+																							singleType="STRING";
+																							value="Olive";
+																						};
+																					};
+																					class Item1
+																					{
+																						class data
+																						{
+																							singleType="SCALAR";
+																							value=1;
+																						};
+																					};
+																				};
+																			};
+																		};
+																		class Item1
+																		{
+																			class data
+																			{
+																				singleType="ARRAY";
+																			};
+																		};
+																	};
+																};
+															};
+														};
+														nAttributes=2;
 													};
 												};
 											};
 											id=19890;
-											atlOffset=78.644066;
+											atlOffset=78.6436;
 										};
 									};
 									id=19889;
-									atlOffset=78.644066;
+									atlOffset=78.6436;
 								};
 							};
 							id=19888;
-							atlOffset=78.644066;
+							atlOffset=78.6436;
 						};
 					};
 					id=19887;
-					atlOffset=78.644066;
+					atlOffset=78.6436;
 				};
 			};
 			id=19886;
-			atlOffset=78.644066;
+			atlOffset=78.6436;
 		};
 		class Item54
 		{
@@ -34164,7 +34972,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15265.083,12.677292,14155.333};
+				position[]={15265.083,12.676857,14155.333};
 				angles[]={0,1.4981034,0};
 			};
 			side="Empty";
@@ -34174,7 +34982,7 @@ class Mission
 			};
 			id=19907;
 			type="O_Heli_Light_02_unarmed_F";
-			atlOffset=80.577438;
+			atlOffset=80.577003;
 		};
 		class Item66
 		{
@@ -34260,6 +35068,156 @@ class Mission
 						{
 							singleType="SCALAR";
 							value=15;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="#initServer";
+					expression="_this setVariable [""#initServer"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="#state";
+					expression="_this setVariable [""#state"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=5;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="#allowDamage";
+					expression="_this setVariable [""#allowDamage"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="#doorStates";
+					expression="_this setVariable [""#doorStates"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="ARRAY";
+							class value
+							{
+								items=3;
+								class Item0
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=0;
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=0;
+									};
+								};
+								class Item2
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=0;
+									};
+								};
+							};
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="#init";
+					expression="_this setVariable [""#init"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				nAttributes=7;
+			};
+		};
+		class Item68
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15995.14,14.991807,16953.711};
+				angles[]={6.2813382,1.5538752,0.0027773159};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=19911;
+			type="Land_WoodenBed_01_F";
+			atlOffset=0.82880878;
+		};
+		class Item69
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={14174.638,18.474955,16367.669};
+			};
+			areaSize[]={1,-1,1};
+			id=19912;
+			type="ModuleEditTerrainObject_F";
+			atlOffset=-1.9073486e-006;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="#name";
+					expression="_this setVariable [""#name"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="#filter";
+					expression="_this setVariable [""#filter"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=7;
 						};
 					};
 				};
